@@ -15,11 +15,15 @@
 
     <div class="bg-modal">
         <span class="background-image"></span>
+        
+
         <div class="modal-contents">
     
- 
-    
+            <span class="logo-image"></span>
+
             <form id="myForm" class="form" novalidate>
+           <!-- *********** NEW DIV ************ -->
+            <div> 
                <div class="form-control">
                     <label for="cardCode"></label>
                     <input type="text" id="cardCode" size="300"
@@ -28,11 +32,16 @@
                 <small>Error message</small>
                 </div>
              
-               <!-- <div><button-cancel>Cancel</buttom-cancel></div> -->
-                <input type="button" name="cancel" value="cancel" onClick="window.location.href='Redeem.html';" />
-                <div><button>Redeem</button></button></div>
-             
-            </form>
+               <div class="model-footer">
+                   By clicking Redeem, you agree to the Gift Card & Promotional Code Terms and Conditions, as applicable.
+               </div>
+            </div>
+
+            <div class="div__buttons_flex">
+                <button-cancel id="cancel">Cancel</button-cancel>
+                <button>Redeem</button>
+            </div>
+        </form>
     
         </div>
     </div>
