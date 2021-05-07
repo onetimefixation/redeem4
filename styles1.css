@@ -41,6 +41,17 @@
 	background-position: center;
   }
 
+  .logo-image {
+	position: absolute;
+	width: 25%;
+	height: 50%;
+	background: url("logo.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+	left: 10%;
+	top:-15%;
+  }
+
 	.modal-contents {
     height: 300px;
     width: 600px;
@@ -49,19 +60,23 @@
     padding: 20px;
     position: relative;
     border-radius: 4px;
-    align-content: center;
-    box-shadow: 5px 8px;
+	box-shadow: 3px 3px 5px grey;
 	display: flex;
-	align-items: center;
+	align-items:flex-start;
 	justify-content: center;
 	border: 2px solid #ffffff;
-	position: absolute;
 	left: 50%;
 	top: 50%;
 	transform: translate(-50%, -50%);
 }
+	.model-footer{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: small;
+	text-align: left;
+	flex: 0 1 auto;
+}
 
- CSS from  Client-side validation - https://www.youtube.com/watch?v=rsd4FNGTRBw */
+ /* CSS from  Client-side validation - https://www.youtube.com/watch?v=rsd4FNGTRBw */
 
 .body {
 	background-color: rgb(255, 255, 255);
@@ -73,31 +88,37 @@
 	margin: 0;
 }
 .form {
-	padding: 30px 40px;	
+	padding: 60px 40px;
+	height: 300px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
 }
 
 .form-control {
 	margin-bottom: 10px;
 	padding-bottom: 20px;
-	position: relative;
-	display: block;
+	flex: 0 1 auto;
 }
 
 .form-control label {
-	display: block;
 	margin-bottom: 5px;
 }
 
 .form-control input {
 	border: 2px solid #ffffff;
-	border-radius: 2px;
-	display: block;
+	border-radius: 0px;
+	flex: 1 1 0%;
 	font-family: Arial, Helvetica, sans-serif;
-	font-size: 15px;
-	padding: 10px;
-	padding-bottom: 3px;
+	font-size: 16px;
+	padding: 50px;
+	padding-bottom: 1px;
 	width: 100%;
 	border-bottom-style: groove;
+	border-bottom-color: royalblue;
+	
+	
 }
 
 .form-control input:focus {
@@ -107,17 +128,28 @@
 
 .form-control.success input {
 	border-color: #2ecc71;
+	border: 2px solid #ffffff;
+	border-bottom-style: groove;
+	border-bottom-color: royalblue;
+	text-align: left;
 }
 
 .form-control.error input {
 	border-color: #e74c3c;
+	border: 2px solid #ffffff;
+	border-bottom-style: groove;
+	border-bottom-color: royalblue;
+	text-align: left;
 }
 
 .form-control small {
 	color: #e74c3c;
-	position: absolute;
+	font-family: Arial, Helvetica, sans-serif;
+	position: relative;
+	top: 1em;
 	bottom: 0;
 	left: 0;
+	text-align: left;
 	visibility: hidden;
 }
 
@@ -149,3 +181,9 @@
 	width: 70px;
 	display: inline-block;
 }
+.div__buttons_flex {
+	display: flex;
+	justify-content: flex-end;
+	align-content: flex-end;
+	align-self: flex-end;
+  }
