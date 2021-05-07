@@ -7,6 +7,10 @@ form.addEventListener('submit', e => {
 	checkInputs();
 });
 
+document.getElementById('cancel').addEventListener('click', e=> {
+	window.location.replace('index.html');
+});
+
 function checkInputs() {
 	// trim to remove the whitespaces
 	const cardCodeValue = cardCode.value.trim();
@@ -14,20 +18,18 @@ function checkInputs() {
 
 
 	if(cardCodeValue === '') {
-		setErrorFor(cardCode, 'Please enter valid code to redeem.');
+		setErrorFor(cardCode, "Please enter valid code to redeem.");
         }
         else if (cardCodeValue.length !== 16) {
-            setErrorFor(cardCode, 'Please enter valid code to redeem.');
+            setErrorFor(cardCode, "That code didn't work. Try again. If the code is for a specific app, redeem it in that app. Learn more.");
             } 
         
         else {
 		/* setSuccessFor(cardCode); */
-  /***************************************************************** */	
-  /* This is temporary until the proper success field is constructed */ 
 
-  setErrorFor(cardCode, cardCodeValue.replace(/\D/g,'')) + " has been added to your account";
+  setSuccessFor(cardCode, cardCodeValue.replace(/\D/g,''));
 
-  /***************************************************************** */
+ 
 	}
 }
 
@@ -38,8 +40,12 @@ function setErrorFor(input, message) {
 	small.innerText = message;
 }
 
-function setSuccessFor(input) {
+
+function setSuccessFor(input, message) {
+	console.log("input.parentElement is " + input.parentElement);
 	const formControl = input.parentElement;
-	formControl.className = 'form-control success';
+	const small = formControl.querySelector('small');
+	formControl.className = 'form-control error';
+	small.innerText = message + " has been added to your account."
 }
 
