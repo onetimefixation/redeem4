@@ -18,18 +18,22 @@
         
 
         <div class="modal-contents">
-    
-            <span class="logo-image"></span>
+            <div class="div__header_flex">
+                <span class="logo-image"></span>
+                <span class="status-block">Redeem Code</span>
+            </div>
 
             <form id="myForm" class="form" novalidate>
            <!-- *********** NEW DIV ************ -->
             <div> 
+                
                <div class="form-control">
                     <label for="cardCode"></label>
                     <input type="text" id="cardCode" size="300"
                                         placeholder="Enter gift card or promo code">
 
                 <small>Error message</small>
+                
                 </div>
              
                <div class="model-footer">
@@ -39,7 +43,7 @@
 
             <div class="div__buttons_flex">
                 <button-cancel id="cancel">Cancel</button-cancel>
-                <button>Redeem</button>
+                <button id='actionButton'>Redeem</button>
             </div>
         </form>
     
