@@ -44,8 +44,16 @@ function setErrorFor(input, message) {
 function setSuccessFor(input, message) {
 	console.log("input.parentElement is " + input.parentElement);
 	const formControl = input.parentElement;
-	const small = formControl.querySelector('small');
-	formControl.className = 'form-control error';
-	small.innerText = message + " has been added to your account."
+	const small = formControl.querySelector('form-control');
+
+	// convert message to currency
+
+	const newMessage = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(message);
+	
+	formControl.className = 'form-control';
+	
+	document.getElementById('actionButton').innerHTML = 'CONFIRM';
+
+	formControl.innerText = "\n\n\nYou are about to add " + newMessage + " to your account";
 }
 
