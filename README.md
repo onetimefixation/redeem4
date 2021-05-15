@@ -73,6 +73,5 @@ The following are known defects.  Some will be corrected and others will remain 
 
 1) Purely technical - had to create a workaround for the final shown amount to match the amount the user entered.  The fix is to mutiply the displayed amound by .01
 2) The logo on the form needs to be properly trimmed
-3) Clicking on background image is not implemented
-4) Fixed 5/15/21 - Hovering over the buttons do not properly show the pointer.
-5) Fixed 5/15/21 - Upon confirming, the CONFIRM button should disappear
+3) Fixed 5/15/21 - Hovering over the buttons do not properly show the pointer.
+4) Fixed 5/15/21 - Upon confirming, the CONFIRM button should disappear
